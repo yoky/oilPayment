@@ -85,16 +85,16 @@ function payMoney() {
         }
     }).done(function(data) {
         console.log(result.code);
-        // $.ajax({
-        //     url: 'http://posview.19jiayou.cn/api/print.job.add.ashx',
-        //     type: 'POST',
-        //     data: {
-        //         type: 0,
-        //         data: result.Data.Id
-        //     }
-        // }).done(function() {
-        //     $('#modal-wrap').modal('hide');
-        // })
+        $.ajax({
+            url: 'http://posview.19jiayou.cn/api/print.job.add.ashx',
+            type: 'POST',
+            data: {
+                type: 0,
+                data: result.Data.Id
+            }
+        }).done(function() {
+            $('#modal-wrap').modal('hide');
+        })
     }).fail(function(e) {
         console.log(e);
     })
