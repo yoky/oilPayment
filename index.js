@@ -52,6 +52,7 @@ $('#aliPay').on('click', function() {
     }).done(function(res) {
         $('#modal-wrap .beforeOrder').hide();
         $('#modal-wrap .afterOrder').show();
+        $('#modal-wrap .afterOrder .code').val('');
         $('#modal-wrap .code input').focus();
         $('.modal-footer').hide();
 
